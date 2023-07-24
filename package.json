@@ -1,0 +1,16 @@
+{
+  "name": "fa-watching-transfer-accounts",
+  "version": "1.0.0",
+  "description": "Transferring FA watching from one account to another",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node arcawatch.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prompt": "^1.3.0",
+    "puppeteer": "^20.9.0"
+  }
+}
