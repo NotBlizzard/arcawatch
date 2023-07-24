@@ -60,7 +60,11 @@ prompt.get(["username"], (err, result) => {
     for (let i = 0; i < names.length; i++) {
       await page.goto(`https://furaffinity.net/user/${names[i]}`);
       await page.waitForSelector("a.button:nth-child(1)");
-      await page.click("a.button:nth-child(1)");
+      const element = await page.$("a.button:nth-child(1)");
+      const value = await page.evaluate((e) => e.textContent, element);
+      if (value === "+Watch") {
+        await page.click("a.button:nth-child(1)");
+      }
     }
 
     console.log("Done!");
